@@ -155,7 +155,8 @@ end
 function M.quit(buf_handle)
   if vim.b['hop#marked'] then
     vim.api.nvim_buf_delete(buf_handle, { force = true })
-    vim.cmd('echohl Error|echo "no buf_handle = ' .. buf_handle .. '"')
+    --vim.cmd('echohl Error|echo "no buf_handle = ' .. buf_handle .. '"')
+    vim.cmd("normal `'")
   end
 end
 
