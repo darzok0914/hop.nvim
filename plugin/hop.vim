@@ -21,7 +21,7 @@ command! HopChar2 lua require'hop'.hint_char2()
 command! HopLine lua require'hop'.hint_lines()
 
 " Highlight used for the mono-sequence keys (i.e. sequence of 1).
-highlight default HopNextKey  guifg=#ff007c gui=bold blend=0
+highlight default HopNextKey  guifg=#00dfff gui=bold blend=0
 
 " Highlight used for the first key in a sequence.
 highlight default HopNextKey1 guifg=#00dfff gui=bold blend=0
