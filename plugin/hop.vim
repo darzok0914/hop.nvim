@@ -27,4 +27,4 @@ highlight default HopNextKey  guifg=#00dfff gui=bold blend=0
 highlight default HopNextKey1 guifg=#00dfff gui=bold blend=0
 
 " Highlight used for the second and remaining keys in a sequence.
-highlight default HopNextKey2 guifg=#2b8db3          blend=0
+highlight default HopNextKey2 guifg=#00dfff          blend=0
