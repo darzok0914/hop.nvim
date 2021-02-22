@@ -155,7 +155,7 @@ end
 function M.quit(buf_handle)
   if vim.b['hop#marked'] then
     vim.api.nvim_buf_delete(buf_handle, { force = true })
-    vim.api.nvim_buf_set_keymap(buf_handle, '', '<esc>', '<cmd>`'<cr>', {})
+    vim.api.nvim_buf_set_keymap(buf_handle, '', '<esc>', "<cmd>`'<cr>", {})
   end
 end
 
