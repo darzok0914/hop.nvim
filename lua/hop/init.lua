@@ -146,6 +146,9 @@ function M.refine_hints(buf_handle, key)
 
     -- JUMP!
     vim.api.nvim_win_set_cursor(buf_handle, { win_top_line + h.line, h.real_col - 1})
+
+    -- send an event
+    vim.cmd("doautocmd User HopDone")
   end
 end
 
@@ -155,7 +158,13 @@ end
 function M.quit(buf_handle)
   if vim.b['hop#marked'] then
     vim.api.nvim_buf_delete(buf_handle, { force = true })
-    --vim.cmd("normal `'")
+  end
+end
+
+function M.abort(buf_handle)
+  if vim.b['hop#marked'] then
+    vim.api.nvim_buf_delete(buf_handle, { force = true })
+    vim.cmd("doautocmd User HopDone")
   end
 end
 
