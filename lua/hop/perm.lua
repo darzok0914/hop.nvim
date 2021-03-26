@@ -2,6 +2,11 @@ local defaults = require'hop.defaults'
 
 local M = {}
 
+ -- Get the first key of a key set.
+local function first_key(keys)
+  return keys:sub(1, 1)
+end
+
 M.TrieBacktrackFilling = {}
 
 -- Get the sequence encoded in a trie by a pointer.
