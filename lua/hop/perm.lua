@@ -7,6 +7,18 @@ local function first_key(keys)
   return keys:sub(1, 1)
 end
 
+   -- Get the next key of the input key in the input key set, if any, or return nil.
+local function next_key(keys, key)
+  local i = keys:find(key)
+
+  if i == #keys then
+    return nil
+  end
+
+  local i1 = i + 1
+  return keys:sub(i1, i1)
+end
+
 M.TrieBacktrackFilling = {}
 
 -- Get the sequence encoded in a trie by a pointer.
