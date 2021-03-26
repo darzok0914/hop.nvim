@@ -186,11 +186,11 @@ function M.permutations(keys, n, opts)
   local p = {}
 
   for _ = 1, n do
-    trie, p = self:TrieBacktrackFilling:next_perm(keys, trie, p)
+    trie, p = self:TrieBacktrackFilling.next_perm(keys, trie, p)
   end
 
   for _, sub_trie in pairs(trie) do
-    vim.list_extend(perms, self:TrieBacktrackFilling:trie_to_perms(sub_trie, {}))
+    vim.list_extend(perms, self:TrieBacktrackFilling.trie_to_perms(sub_trie, {}))
   end
 
   return perms
